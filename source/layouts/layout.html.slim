@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= "#{current_page.data.title}"
+    meta content='width=device-width, initial-scale=1, maximum-scale=2, user-scalable=1' name='viewport'
+    meta name='description' content="fill this in"
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Raleway:400,300,600'
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato:300,400'
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Montserrat:400,700'
+
+    = stylesheet_link_tag :bootstrap
+    = stylesheet_link_tag :grayscale
+
+    / = stylesheet_link_tag :site
+
+    /![if lt IE 9]
+      | <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      | <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+  body#page-top data-spy="scroll" data-target=".navbar-fixed-top"
+    = partial :navbar
+    = partial :hero
+    = yield
+    = javascript_include_tag :all
