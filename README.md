@@ -15,3 +15,9 @@
 #### Questions
  - Background photo chatham or amsterdam
  - embed rsvp in page?
+
+#### Deploy
+```
+middleman build
+middleman deploy
+```
